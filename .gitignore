@@ -15,6 +15,9 @@ paket.lock.html
 paket-files
 packages.dependencies.json
 
+.idea
+*.iml
+
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
