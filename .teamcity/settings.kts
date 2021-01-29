@@ -25,6 +25,12 @@ object Build : BuildType({
         root(HelloWorldVcs)
     }
 
+    artifactRules = "src/dotnet/HelloWorld/bin/Debug/netcoreapp3.1 => bin/"
+
+    params {
+        param("env.CLEANCITY", "1")
+    }
+    
     steps {
         script {
             name = "start"
