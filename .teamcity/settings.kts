@@ -64,6 +64,6 @@ object HelloWorldSshVcs : GitVcsRoot({
     authMethod = uploadedKey {
         userName = "git"
         uploadedKey = "ssh-key-1"
-        passphrase = "credentialsJSON:359a53b4-a663-4dd7-b988-79038a38f505"
+        passphrase = DslContext.getParameter("github_ssh_key_passphrase")
     }
 })
