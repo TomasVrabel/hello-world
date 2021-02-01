@@ -22,7 +22,7 @@ object Build : BuildType({
     name = "Hello world"
 
     vcs {
-        root(HelloWorldVcs)
+        root(HelloWorldSshVcs)
     }
 
     artifactRules = "src/dotnet/HelloWorld/bin/Debug/netcoreapp3.1 => bin/"
@@ -54,4 +54,14 @@ object Build : BuildType({
 object HelloWorldVcs : GitVcsRoot({
     name = "HelloWorldVcs"
     url = "https://github.com/TomasVrabel/hello-world.git"
+})
+
+object HelloWorldSshVcs : GitVcsRoot({
+    name = "HelloWorldSshVcs"
+    url = "https://github.com/TomasVrabel/hello-world.git"
+    authMethod = uploadedKey {
+        userName = "git"
+        uploadedKey = "ssh-key-1"
+        passphrase = "credentialsJSON:359a53b4-a663-4dd7-b988-79038a38f505"
+    }
 })
