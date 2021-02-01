@@ -60,7 +60,7 @@ object HelloWorldVcs : GitVcsRoot({
 
 object HelloWorldSshVcs : GitVcsRoot({
     name = "HelloWorldSshVcs"
-    url = "https://github.com/TomasVrabel/hello-world.git"
+    url = "git@github.com:TomasVrabel/hello-world.git"
     authMethod = uploadedKey {
         userName = "git"
         uploadedKey = "ssh-key-1"
