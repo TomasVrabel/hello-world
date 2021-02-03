@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dotnetBuild
+import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.schedule
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -49,7 +50,18 @@ object Build : BuildType({
     }
 
     triggers {
-        vcs { }
+        vcs {
+            enabled = true
+        }
+
+        schedule {
+            enabled =  false
+            schedulingPolicy = daily {
+                hour = 7
+            }
+            branchFilter = ""
+            triggerBuild = always()
+        }
     }
 })
 
