@@ -67,4 +67,5 @@ object Build : BuildType({
 object HelloWorldVcs : GitVcsRoot({
     name = "HelloWorldVcs"
     url = "https://github.com/TomasVrabel/hello-world.git"
+    checkoutPolicy = USE_MIRRORS
 })
