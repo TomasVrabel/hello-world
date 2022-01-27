@@ -25,7 +25,7 @@ object Build : BuildType({
     name = "Hello world"
 
     vcs {
-        root(HelloWorldSshVcs)
+        root(HelloWorldVcs)
     }
 
     artifactRules = "src/dotnet/HelloWorld/bin/Debug/netcoreapp3.1 => bin/"
