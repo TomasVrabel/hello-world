@@ -38,10 +38,12 @@ object Build : BuildType({
             name = "start"
             scriptContent = "echo 'Hello world!'"
         }
+        /*
         dotnetBuild {
             name = "build"
             projects = "src/dotnet/HelloWorld"
         }
+        */
         script {
             name = "finish"
             scriptContent = "echo 'Build finished!'"
