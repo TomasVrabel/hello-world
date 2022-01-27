@@ -69,13 +69,3 @@ object HelloWorldVcs : GitVcsRoot({
     name = "HelloWorldVcs"
     url = "https://github.com/TomasVrabel/hello-world.git"
 })
-
-object HelloWorldSshVcs : GitVcsRoot({
-    name = "HelloWorldSshVcs"
-    url = "git@github.com:TomasVrabel/hello-world.git"
-    authMethod = uploadedKey {
-        userName = "git"
-        uploadedKey = "ssh-key-1"
-        passphrase = DslContext.getParameter("github_ssh_key_passphrase")
-    }
-})
