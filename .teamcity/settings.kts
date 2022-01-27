@@ -16,7 +16,6 @@ project {
     }
 
     vcsRoot (HelloWorldVcs)
-    vcsRoot (HelloWorldSshVcs)
     
     buildType(Build)
 }
