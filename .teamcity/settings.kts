@@ -67,4 +67,8 @@ object Build : BuildType({
 object HelloWorldVcs : GitVcsRoot({
     name = "HelloWorldVcs"
     url = "https://github.com/TomasVrabel/hello-world.git"
+	branch = "refs/heads/master"
+	branchSpec = """
+            +:refs/heads/*
+        """.trimIndent()
 })
